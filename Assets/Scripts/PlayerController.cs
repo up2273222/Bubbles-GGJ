@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDir;
     
     //Death + Respawn variables
-    public Vector2 respawnLocation;
+    public Vector3 respawnLocation;
     
     //Sprite variables
     public GameObject spriteHolder;
@@ -77,17 +77,24 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("A");
-        if (collision.gameObject.layer == 6)
+        switch (collision.gameObject.layer)
         {
-            PlayerDeath();
+            case 6:
+                PlayerDeath();
+                break;
+            case 7:
+                respawnLocation = collision.gameObject.transform.position;
+                break;
+                
+            
         }
+        
+        
     }
 
     private void rotatePlayerSprite()
     {
         spriteHolder.transform.rotation = Quaternion.Euler(0,0,Mathf.Atan2(moveDir.y, moveDir.x) * Mathf.Rad2Deg - 90f);
-        
     }
     
 
