@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -79,9 +80,11 @@ public class PlayerController : MonoBehaviour
     {
         switch (collision.gameObject.layer)
         {
+            //"Death" layer
             case 6:
                 PlayerDeath();
                 break;
+            //"Checkpoint" layer
             case 7:
                 respawnLocation = collision.gameObject.transform.position;
                 break;
@@ -91,6 +94,8 @@ public class PlayerController : MonoBehaviour
         
         
     }
+    
+   
 
     private void rotatePlayerSprite()
     {
