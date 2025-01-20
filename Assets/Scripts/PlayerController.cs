@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         switch (collision.gameObject.layer)
         {
