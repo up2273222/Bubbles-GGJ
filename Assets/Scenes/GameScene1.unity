@@ -5464,6 +5464,7 @@ MonoBehaviour:
   player: {fileID: 1257164521}
   harpoon: {fileID: 3942006961953422570, guid: 4811fbeccedfba641924eef7e93415d2, type: 3}
   harpoonSpeed: 20
+  horizontalSpeed: 2
   harpoonLifespan: 2
 --- !u!1 &1099582509
 GameObject:
