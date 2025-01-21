@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-   
+    public static PlayerController instance;
     //Movement vectors
     private Vector2 mousePosition;
     private Vector2 moveDir;
@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         //Assign components
         rb = GetComponent<Rigidbody2D>();
+        instance = this;
         
         //Set starting values
         canMove = true;
@@ -103,7 +104,7 @@ public class PlayerController : MonoBehaviour
     }
     
 
-    private void PlayerDeath()
+    public void PlayerDeath()
     {
         rb.velocity = Vector2.zero;
         canMove = false;

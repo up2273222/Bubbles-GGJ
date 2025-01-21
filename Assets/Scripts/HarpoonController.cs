@@ -11,8 +11,6 @@ public class HarpoonController : MonoBehaviour
     private bool hasShot;
     
     public Transform player;
-    public GameObject harpoon;
-    private GameObject harpoonInstance;
     public float harpoonSpeed;
     public float horizontalSpeed;
     public float harpoonLifespan;
@@ -74,19 +72,29 @@ public class HarpoonController : MonoBehaviour
     private IEnumerator killHarpoon()
     {
         yield return new WaitForSeconds(harpoonLifespan);
-        GameObject.Destroy(harpoonInstance);
         GameObject.Destroy(this.gameObject);
         
     }
 
     private void dropHarpoon()
-    {
-       harpoonInstance = Instantiate(harpoon, transform.position, Quaternion.identity);
-       Rigidbody2D _harpoonRB = harpoonInstance.GetComponent<Rigidbody2D>();
-       _harpoonRB.AddForce(Vector2.down * harpoonSpeed,ForceMode2D.Impulse);
+    { 
+        
+       RaycastHit2D _hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0f, Vector2.down, Mathf.Infinity);
+       if ((_hit.collider) && (_hit.collider.gameObject.layer == 3))
+       {
+           PlayerController.instance.PlayerDeath();
+       }
+       
+        
+        
        StartCoroutine(harpoonLeavePause());
        StartCoroutine(killHarpoon());
        
         
+    }
+
+    void OnDrawGizmos()
+    {
+       
     }
 }
