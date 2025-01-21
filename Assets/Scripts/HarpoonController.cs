@@ -14,6 +14,7 @@ public class HarpoonController : MonoBehaviour
     public GameObject harpoon;
     private GameObject harpoonInstance;
     public float harpoonSpeed;
+    public float horizontalSpeed;
     public float harpoonLifespan;
 
 
@@ -26,12 +27,7 @@ public class HarpoonController : MonoBehaviour
 
     private void Update()
     {
-        if (isFollowingPlayer)
-        {
-            Vector3 movePos = transform.position;
-            movePos.x = player.position.x;
-            transform.position = movePos;
-        }
+       
             
     }
 
@@ -40,6 +36,12 @@ public class HarpoonController : MonoBehaviour
         if (hasShot)
         {
             transform.position += new Vector3(0f, 0.1f, 0f);
+        }
+        else if (isFollowingPlayer)
+        {
+            Vector3 movePos = transform.position;
+            movePos.x = Mathf.Lerp(movePos.x, player.position.x, Time.deltaTime * horizontalSpeed);
+            transform.position = movePos;
         }
     }
 
