@@ -88,6 +88,10 @@ public class PlayerController : MonoBehaviour
             case 7:
                 respawnLocation = collision.gameObject.transform.position;
                 break;
+            //"Jewel" layer
+            case 9:
+                GlobalManager.Instance.score += 10;
+                break;
                 
             
         }

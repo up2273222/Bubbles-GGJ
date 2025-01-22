@@ -10,6 +10,7 @@ public class GlobalManager : MonoBehaviour
 
     public float gameTimer;
     public int deathCounter;
+    public int score;
     private void Awake()
     {
         Instance = this;

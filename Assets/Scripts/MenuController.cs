@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
@@ -43,17 +44,17 @@ public class MenuController : MonoBehaviour
 
     public void LoadLevel1()
     {
-        print("Loading Level1");
+        SceneManager.LoadScene(1);
     }
 
     public void LoadLevel2()
     {
-        print("Loading Level2");
+        SceneManager.LoadScene(2);
     }
 
     public void LoadLevel3()
     {
-        print("Loading Level3");
+        SceneManager.LoadScene(3);
     }
 
     private IEnumerator LevelSelectDelay()
