@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - PopBubble
+  - HookPoint
   layers:
   - Default
   - TransparentFX

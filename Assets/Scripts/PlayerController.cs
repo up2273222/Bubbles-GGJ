@@ -19,11 +19,11 @@ public class PlayerController : MonoBehaviour
     public GameObject spriteHolder;
     
     //Components
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     
     //Movement values
     [Header("Movement")]
-    private bool canMove;
+    public bool canMove;
     public float moveSpeed;
     public float maxSpeed;
 

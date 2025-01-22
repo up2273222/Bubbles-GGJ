@@ -26,4 +26,7 @@ public class BubbleSpawner : MonoBehaviour
             spawnTimer = spawnTimerValue;
         }
     }
+    
+    
+    
 }
