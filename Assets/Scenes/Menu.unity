@@ -1219,7 +1219,7 @@ Transform:
   m_GameObject: {fileID: 939339414}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.7, y: -17.48, z: -0.5}
+  m_LocalPosition: {x: 3.7, y: 8.65, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2739,6 +2739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlobalManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8085438602620694273, guid: b2d7256cb343ee64cbfd037c786cbdc6, type: 3}
+      propertyPath: fishermanHook
+      value: 
+      objectReference: {fileID: 2512497442908588961, guid: 65ea88a6888347346bb8d36f13e9e2da, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
