@@ -49,6 +49,7 @@ public class GlobalManager : MonoBehaviour
     void dropHook()
     {
          PlayerController.instance.canMove = false;
+         PlayerController.instance.canDie = false;
          PlayerController.instance.rb.velocity = Vector3.zero;
          Vector3 hookPos = new Vector3(PlayerController.instance.transform.position.x, PlayerController.instance.transform.position.y + hookYOffset , PlayerController.instance.transform.position.z);
          GameObject hook = Instantiate(fishermanHook, hookPos, Quaternion.Euler(0,0,0));

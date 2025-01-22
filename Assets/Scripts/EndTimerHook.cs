@@ -33,8 +33,8 @@ public class EndTimerHook : MonoBehaviour
 
     private IEnumerator RestartLevel()
     {
-        yield return new WaitForSeconds(2f);
         GlobalManager.Instance.deathCounter++;
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }

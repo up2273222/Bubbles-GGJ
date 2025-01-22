@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     
     //Death + Respawn variables
     public Vector3 respawnLocation;
+    public bool canDie;
     
     //Sprite variables
     public GameObject spriteHolder;
@@ -36,7 +37,7 @@ public class PlayerController : MonoBehaviour
         
         //Set starting values
         canMove = true;
-        
+        canDie = true;
         //DEBUG
         respawnLocation = transform.position;
     }
@@ -109,14 +110,18 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerDeath()
     {
-        if (GlobalManager.Instance)
+        if (canDie)
         {
+           if (GlobalManager.Instance)
+           {
             GlobalManager.Instance.deathCounter++;
+           }
+           rb.velocity = Vector2.zero;
+           canMove = false;
+           StartCoroutine(movementCooldown());
+           transform.position = respawnLocation; 
         }
-        rb.velocity = Vector2.zero;
-        canMove = false;
-        StartCoroutine(movementCooldown());
-        transform.position = respawnLocation;
+        
     }
 
     private IEnumerator movementCooldown()
