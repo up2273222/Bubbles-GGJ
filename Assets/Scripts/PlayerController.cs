@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed;
 
     
-    // Start is called before the first frame update
     void Start()
     {
         //Assign components
@@ -106,6 +105,10 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerDeath()
     {
+        if (GlobalManager.Instance)
+        {
+            GlobalManager.Instance.deathCounter++;
+        }
         rb.velocity = Vector2.zero;
         canMove = false;
         StartCoroutine(movementCooldown());
