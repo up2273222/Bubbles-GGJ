@@ -211,7 +211,7 @@ Transform:
   m_GameObject: {fileID: 40375214}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.6, y: -36.8, z: -0.0674553}
+  m_LocalPosition: {x: -16.6, y: -36.8, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1266,7 +1266,7 @@ Transform:
   m_GameObject: {fileID: 939339414}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.7, y: 8.65, z: -3.62}
+  m_LocalPosition: {x: 3.7, y: 8.65, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1371,7 +1371,7 @@ Transform:
   m_GameObject: {fileID: 1125359507}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.7, y: -17.48, z: -1.47}
+  m_LocalPosition: {x: 3.7, y: -17.48, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1932,6 +1932,7 @@ MonoBehaviour:
   BelowWaterCam: {fileID: 1125359508}
   MenuScreen1: {fileID: 344718497}
   MenuScreen2: {fileID: 618756865}
+  mousePos: {x: 0, y: 0, z: 0}
 --- !u!1 &1456138003
 GameObject:
   m_ObjectHideFlags: 3
@@ -2300,7 +2301,7 @@ Transform:
   m_GameObject: {fileID: 1585224496}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6522315, y: -6.3437376, z: -0.19105251}
+  m_LocalPosition: {x: 2.6522315, y: -6.3437376, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2458,7 +2459,7 @@ Transform:
   m_GameObject: {fileID: 1817531361}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.7, y: 8.65, z: -3.62}
+  m_LocalPosition: {x: 3.7, y: 8.65, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

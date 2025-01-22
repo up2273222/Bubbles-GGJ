@@ -5,6 +5,7 @@ using System.Numerics;
 using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
+using Cinemachine;
 
 public class MenuBubble : MonoBehaviour
 {
@@ -13,10 +14,9 @@ public class MenuBubble : MonoBehaviour
     public float mouseForce;
     public float riseSpeed;
 
-
-
-
     
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,8 +34,12 @@ public class MenuBubble : MonoBehaviour
 
     void Update()
     {
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
        
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+       
+       
+
     }
 
     private void OnMouseOver()

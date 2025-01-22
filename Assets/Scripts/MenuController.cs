@@ -13,9 +13,12 @@ public class MenuController : MonoBehaviour
     public GameObject MenuScreen1;
     public GameObject MenuScreen2;
 
+    public Vector3 mousePos;
+    
 
     private void Start()
     {
+
         AboveWaterCam.Priority = 11;
         BelowWaterCam.Priority = 10;
     }
