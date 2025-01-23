@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class AirCurrent : MonoBehaviour
 {
+
+    private AreaEffector2D _ae;
     private void Start()
     {
-        AreaEffector2D _ae = GetComponent<AreaEffector2D>();
-        _ae.forceAngle = 360 - transform.eulerAngles.z;
+       _ae = GetComponent<AreaEffector2D>();
+        _ae.forceAngle = transform.eulerAngles.z;
 
     }
+
+    
 
 }
