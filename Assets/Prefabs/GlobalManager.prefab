@@ -47,3 +47,6 @@ MonoBehaviour:
   gameTimer: 0
   deathCounter: 0
   score: 0
+  levelTimer: 0
+  hookYOffset: 0
+  fishermanHook: {fileID: 0}
