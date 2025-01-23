@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
@@ -14,6 +15,10 @@ public class MenuController : MonoBehaviour
     public GameObject MenuScreen2;
 
     public Vector3 mousePos;
+    
+    public float level1Timer;
+    public float level2Timer;
+    public float level3Timer;
     
 
     private void Start()
@@ -48,16 +53,23 @@ public class MenuController : MonoBehaviour
     public void LoadLevel1()
     {
         SceneManager.LoadScene(1);
+        GlobalManager.Instance.levelTimer = level1Timer;
+        GlobalManager.Instance.score = 0;
     }
 
     public void LoadLevel2()
     {
         SceneManager.LoadScene(2);
+        GlobalManager.Instance.levelTimer = level2Timer;
+        GlobalManager.Instance.score = 0;
     }
 
     public void LoadLevel3()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(3);  
+        GlobalManager.Instance.levelTimer = level3Timer;
+        GlobalManager.Instance.score = 0;
+                
     }
 
     private IEnumerator LevelSelectDelay()
