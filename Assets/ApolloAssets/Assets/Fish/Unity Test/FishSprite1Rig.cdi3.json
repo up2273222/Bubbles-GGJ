@@ -1,0 +1,60 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "ParamAngleX",
+			"GroupId": "",
+			"Name": "Angle X"
+		},
+		{
+			"Id": "ParamAngleY",
+			"GroupId": "",
+			"Name": "Angle Y"
+		},
+		{
+			"Id": "Param2",
+			"GroupId": "",
+			"Name": "Position X"
+		},
+		{
+			"Id": "Param3",
+			"GroupId": "",
+			"Name": "Position Y"
+		},
+		{
+			"Id": "BubbleScaleParam",
+			"GroupId": "",
+			"Name": "BubbleScale"
+		},
+		{
+			"Id": "Param",
+			"GroupId": "",
+			"Name": "Bubble Squash and Stretch"
+		}
+	],
+	"ParameterGroups": [],
+	"Parts": [
+		{
+			"Id": "Part2",
+			"Name": "circle.png"
+		},
+		{
+			"Id": "FishInBubble",
+			"Name": "FishInBubble"
+		},
+		{
+			"Id": "Part",
+			"Name": "Bubble Reflection"
+		},
+		{
+			"Id": "Fish",
+			"Name": "Fish"
+		}
+	],
+	"CombinedParameters": [
+		[
+			"Param2",
+			"Param3"
+		]
+	]
+}

@@ -1,0 +1,57 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "ParamAngleX",
+			"GroupId": "",
+			"Name": "Angle X"
+		},
+		{
+			"Id": "ParamAngleY",
+			"GroupId": "",
+			"Name": "Angle Y"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"GroupId": "",
+			"Name": "Angle Z"
+		},
+		{
+			"Id": "Param2",
+			"GroupId": "",
+			"Name": "Tendrills Move"
+		},
+		{
+			"Id": "Param",
+			"GroupId": "",
+			"Name": "Squash and Stretch"
+		},
+		{
+			"Id": "Param3",
+			"GroupId": "",
+			"Name": "Cap Squash and Stretch"
+		},
+		{
+			"Id": "Param4",
+			"GroupId": "",
+			"Name": "Tendrill 1A"
+		},
+		{
+			"Id": "Param6",
+			"GroupId": "",
+			"Name": "Tendrill 2A"
+		},
+		{
+			"Id": "Param8",
+			"GroupId": "",
+			"Name": "Tendrill 3A"
+		},
+		{
+			"Id": "Param10",
+			"GroupId": "",
+			"Name": "Tendrill 4A"
+		}
+	],
+	"ParameterGroups": [],
+	"Parts": []
+}

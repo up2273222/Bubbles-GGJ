@@ -85,22 +85,32 @@ public class PlayerController : MonoBehaviour
             case 6:
                 PlayerDeath();
                 break;
-            //"Checkpoint" layer
-            case 7:
-                respawnLocation = collision.gameObject.transform.position;
-                break;
-            //"Jewel" layer
-            case 9:
-                GlobalManager.Instance.score += 10;
-                break;
+            
                 
             
         }
         
         
     }
-    
-   
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        switch (other.gameObject.layer)
+        {
+             //"Checkpoint" layer
+             case 7:
+              respawnLocation = other.gameObject.transform.position;
+              break;
+             //"Jewel" layer
+             case 9:
+             GlobalManager.Instance.score += 10;
+             Destroy(other.gameObject);
+             break;
+        }   
+       
+        
+    }
+
 
     private void rotatePlayerSprite()
     {

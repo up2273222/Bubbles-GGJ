@@ -1,0 +1,23 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "JellyRig.moc3",
+		"Textures": [
+			"JellyRig.1024/texture_00.png"
+		],
+		"Physics": "JellyRig.physics3.json",
+		"DisplayInfo": "JellyRig.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		}
+	]
+}

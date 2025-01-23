@@ -1,0 +1,23 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "FishSprite1Rig.moc3",
+		"Textures": [
+			"FishSprite1Rig.1024/texture_00.png"
+		],
+		"Physics": "FishSprite1Rig.physics3.json",
+		"DisplayInfo": "FishSprite1Rig.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		}
+	]
+}
