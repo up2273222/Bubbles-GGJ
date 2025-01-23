@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class GlobalManager : MonoBehaviour
     public int deathCounter;
     public int score;
     public float levelTimer;
+    public bool isMainMenu;
     
     public int hookYOffset;
     private bool hasDroppedHook = false;
@@ -33,8 +35,14 @@ public class GlobalManager : MonoBehaviour
 
     private void Update()
     {
-        gameTimer += Time.deltaTime;
-        levelTimer -= Time.deltaTime;
+       
+
+        if (!isMainMenu)
+        {
+           levelTimer -= Time.deltaTime;  
+           gameTimer += Time.deltaTime;
+        }
+        
 
         if (levelTimer <= 0 && !hasDroppedHook)
         {
@@ -44,6 +52,8 @@ public class GlobalManager : MonoBehaviour
         }
         
     }
+    
+   
 
 
     void dropHook()

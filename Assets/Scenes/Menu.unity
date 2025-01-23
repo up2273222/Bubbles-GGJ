@@ -156,7 +156,7 @@ MonoBehaviour:
   minX: {fileID: 623081878}
   maxX: {fileID: 757916770}
   spawnY: {fileID: 1537354872}
-  spawnTimerValue: 5
+  spawnTimerValue: 2
 --- !u!61 &40375216
 BoxCollider2D:
   m_ObjectHideFlags: 0
