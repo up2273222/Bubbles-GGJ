@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class music : MonoBehaviour
 {
-    void Start()
+    public static music Instance;
+    private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }

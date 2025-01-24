@@ -40,6 +40,7 @@ public class PauseMenuController : MonoBehaviour
    {
       Time.timeScale = 1f;
       SceneManager.LoadScene(0);
+      isPaused = false;
    }
 
    public void PauseGame()
