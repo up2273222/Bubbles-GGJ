@@ -16,9 +16,9 @@ public class MenuController : MonoBehaviour
 
     public Vector3 mousePos;
     
-    public float level1Timer;
-    public float level2Timer;
-    public float level3Timer;
+    private float level1Timer = 60f;
+    private float level2Timer = 60f;
+    private float level3Timer = 60f;
     
 
     private void Start()

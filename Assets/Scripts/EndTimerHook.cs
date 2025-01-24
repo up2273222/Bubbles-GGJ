@@ -35,6 +35,7 @@ public class EndTimerHook : MonoBehaviour
     {
         GlobalManager.Instance.deathCounter++;
         yield return new WaitForSeconds(2f);
+        GlobalManager.Instance.levelTimer = 60f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
